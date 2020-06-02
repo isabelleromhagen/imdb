@@ -77,26 +77,24 @@ class Card extends Component {
                 <div>
                     {this.props.btnTexts.map((elem) => {
                         return(
-                        <Button className="optionBtn" btnText={elem} isClicked={this.handleOption} btnKey={elem}></Button>
+                            <Button className="optionBtn" btnText={elem} isClicked={this.handleOption} btnKey={elem} key={elem}></Button>
                         );
                     })}
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            {
-                                this.props.tableHeads.map((tableHead) => <TableHead key={tableHead} tableHead={tableHead}/>)
-                            }
+                            {this.props.tableHeads.map((tableHead) => <TableHead key={tableHead} tableHead={tableHead}/>)}
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.actorsList.map((elem) => {
+                        {this.state.actorsList.map((elem, index) => {
                             return (
-                                <tr>
-                                    <td> <img src={elem.pictureUrl} alt={elem.name}/> </td>
+                                <tr key={elem.name}>
+                                    <td> <img src={elem.pictureUrl} alt={elem.name} key={index}/> </td>
                                     <td>{elem.name}</td>
                                     <td>{elem.popularity}</td>
-                                    <td> <Button isClicked={this.handleDelete} btnText="Delete" btnKey={elem.name}/> </td>
+                                    <td> <Button isClicked={this.handleDelete} btnText="Delete" btnKey={elem.name} key={elem}/> </td>
                                 </tr>
                             );
                                 

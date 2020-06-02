@@ -11,8 +11,6 @@ button {
   padding: 10px;
 }
 
-
-
 .optionBtn {
   display: inline-block;
   padding: 50px;
@@ -23,12 +21,16 @@ button {
   flex-direction: row;
   flex-wrap: wrap;*/
 
+}
 
-
+table {
+ 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th {
-  padding: 50px;
+  padding: 20px;
   
 }
 img {

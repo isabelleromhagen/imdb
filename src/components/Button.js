@@ -7,13 +7,9 @@ class Button extends Component {
         super(props);
         this.onClick = this.onClick.bind(this);
     }
-
-
     onClick(){
         return this.props.btnKey;
     }
-
-
     render() {
         return (
             <button onClick={this.props.isClicked} value={this.props.btnKey}>{this.props.btnText}</button>
